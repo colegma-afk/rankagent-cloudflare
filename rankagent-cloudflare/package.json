@@ -1,0 +1,19 @@
+{
+  "name": "rankagent-cloudflare",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "RankAgent — agente IA de SEO con usuarios, base de datos D1 y despliegue en Cloudflare Workers",
+  "scripts": {
+    "dev": "wrangler dev --port 8787",
+    "deploy": "wrangler deploy",
+    "setup": "node scripts/setup.mjs",
+    "db:create": "wrangler d1 create rankagent",
+    "db:init:local": "wrangler d1 execute rankagent --local --file schema.sql",
+    "db:init:remote": "wrangler d1 execute rankagent --remote --file schema.sql",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^4.86.0"
+  }
+}

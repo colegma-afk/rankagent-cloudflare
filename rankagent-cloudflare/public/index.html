@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RankAgent — Agente IA de SEO para pequeños clientes</title>
+  <meta name="description" content="Agente autónomo que audita, estrategiza, optimiza y prepara la indexación de sitios de pequeños clientes para Google y buscadores IA." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236366f1'/%3E%3Cpath d='M8 22 L14 14 L18 18 L24 9' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="30" height="30"><rect width="32" height="32" rx="8" fill="url(#g1)"/><path d="M8 22 L14 14 L18 18 L24 9" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs></svg>
+        </span>
+        <span class="logo-text">Rank<strong>Agent</strong></span>
+      </div>
+      <nav class="nav" id="nav">
+        <a href="#/panel" data-route="panel"><span class="nav-ic">▦</span> Panel</a>
+        <a href="#/clientes" data-route="clientes"><span class="nav-ic">◉</span> Clientes</a>
+        <a href="#/agente" data-route="agente"><span class="nav-ic">✦</span> Agente</a>
+        <a href="#/usuarios" data-route="usuarios" data-admin><span class="nav-ic">☺</span> Usuarios</a>
+        <a href="#/ajustes" data-route="ajustes" data-admin><span class="nav-ic">⚙</span> Ajustes</a>
+      </nav>
+      <div class="sidebar-foot" id="userBox" style="display:none"></div>
+      <div class="sidebar-foot" id="agentDotBox">
+        <div class="agent-dot" id="agentDot"></div>
+        <div>
+          <div class="foot-title">Motor D1</div>
+          <div class="foot-sub">auditoría · estrategia · GEO · indexación</div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main" id="main" role="main"></main>
+  </div>
+
+  <div id="modal-root"></div>
+  <div id="toasts" aria-live="polite"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
